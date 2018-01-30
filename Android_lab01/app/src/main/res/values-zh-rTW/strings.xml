@@ -6,4 +6,5 @@
     <string name="bmi_label">BMI:</string>
     <string name="suggestion_label">建議：</string>
     <string name="calculate_button">計算</string>
+    <string name="empty_noti">有欄位沒有輸入喔！</string>
 </resources>

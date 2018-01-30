@@ -5,4 +5,5 @@
     <string name="bmi_label">BMI:</string>
     <string name="suggestion_label">Suggestion:</string>
     <string name="calculate_button">Calculate</string>
+    <string name="empty_noti">Empty Column Detected!</string>
 </resources>

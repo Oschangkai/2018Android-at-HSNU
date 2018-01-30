@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:text="@string/height_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="@string/weight_label"
         app:layout_constraintStart_toStartOf="@+id/heightTV"
         app:layout_constraintTop_toBottomOf="@+id/heightTV" />
 
@@ -39,17 +39,16 @@
         android:id="@+id/weightET"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/weightTV"
-        app:layout_constraintStart_toEndOf="@+id/weightTV" />
+        app:layout_constraintStart_toStartOf="@+id/heightET" />
 
     <TextView
         android:id="@+id/bmiLBL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/bmi_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/weightTV"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:text="@string/suggestion_label"
         app:layout_constraintStart_toStartOf="@+id/bmiLBL"
         app:layout_constraintTop_toBottomOf="@+id/bmiLBL" />
 
@@ -68,8 +67,7 @@
         android:id="@+id/bmiTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:text="TextView"
+        android:layout_marginStart="44dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/bmiLBL"
         app:layout_constraintStart_toEndOf="@+id/bmiLBL" />
 
@@ -77,17 +75,16 @@
         android:id="@+id/suggestionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:text="TextView"
         app:layout_constraintBaseline_toBaselineOf="@+id/suggestionLBL"
-        app:layout_constraintStart_toEndOf="@+id/suggestionLBL" />
+        app:layout_constraintStart_toStartOf="@+id/bmiTV" />
 
     <Button
         android:id="@+id/calculateBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
-        android:text="Button"
+        android:onClick="calculateButtonClicked"
+        android:text="@string/calculate_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
