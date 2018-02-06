@@ -17,9 +17,9 @@ public class BMI {
     };
 
     public void setBmi(double height, double weight) {
-        double h = height / 100;
+        double h = height / 100.0;
         double w = weight;
-        bmi = w / h / h;
+        bmi = w / (h*h);
     }
 
     public double getBmi() { return bmi; }
@@ -34,7 +34,7 @@ public class BMI {
             return Suggestions[3];
         } else if(bmi >= bmiLevel[3] && bmi < bmiLevel[4]) {
             return Suggestions[4];
-        } else if(bmi >= bmiLevel[4] && bmi < bmiLevel[5]) {
+        } else if(bmi >= bmiLevel[4]) {
             return Suggestions[5];
         } else return "錯誤";
     }

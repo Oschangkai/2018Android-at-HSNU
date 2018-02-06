@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         bmiVal = bmi.getBmi();
         suggestion = bmi.getSuggestion();
 
-        bmiTV.setText(String.valueOf(bmiVal));
+        bmiTV.setText(String.format("%.1f", bmiVal));
         suggestionTV.setText(suggestion);
     }
 }
