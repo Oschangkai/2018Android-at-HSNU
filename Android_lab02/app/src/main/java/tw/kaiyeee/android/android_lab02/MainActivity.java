@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shashank.sony.fancytoastlib.FancyToast;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText heightET;
@@ -58,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
     public void calculateButtonClicked(View v) {
         boolean isNull = checkIsNull();
         if(isNull) {
-            Toast.makeText(MainActivity.this, R.string.empty_noti, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this, R.string.empty_noti, Toast.LENGTH_SHORT).show();
+            FancyToast.makeText(this, getString(R.string.empty_noti),FancyToast.LENGTH_LONG, FancyToast.WARNING,true).show();
             return;
         }
         showText();
