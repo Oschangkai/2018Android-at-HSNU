@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI 計算機 2</string>
+    <string name="height_label">身高：</string>
+    <string name="weight_label">體重：</string>
+    <string name="bmi_label">BMI:</string>
+    <string name="suggestion_label">建議：</string>
+    <string name="calculate_button">計算</string>
+    <string name="empty_noti">有欄位沒有輸入喔！</string>
+</resources>
