@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class BmiDataListActivity extends AppCompatActivity {
-
     ListView lsv;
     private BmiDataListAdapter adapter;
 

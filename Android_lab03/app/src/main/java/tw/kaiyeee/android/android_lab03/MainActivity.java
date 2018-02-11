@@ -113,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
             fw.flush();
             fw.close();
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
