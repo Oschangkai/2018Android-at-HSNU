@@ -22,7 +22,7 @@
         <activity
             android:name=".IntroPage"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".BmiDataListActivity"></activity>
     </application>
 
 </manifest>

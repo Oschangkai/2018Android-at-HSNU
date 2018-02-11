@@ -9,11 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.shashank.sony.fancytoastlib.FancyToast;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -106,31 +104,24 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         try {
-            String fileName = "BMI_Data";
-            String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-            FancyToast.makeText(this, fullPath,FancyToast.LENGTH_LONG, FancyToast.WARNING,true).show();
-            String savePath = fullPath + File.separator +fileName+".txt";
-            FancyToast.makeText(this, savePath,FancyToast.LENGTH_LONG, FancyToast.WARNING,true).show();
+            String fileName = "BMI_Data.txt";
+            String extPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+            String filePath = extPath + File.separator + fileName;
 
-            File file = new File(savePath);
+            FileWriter fw = new FileWriter(filePath, true);
+            fw.write(data.getBmiDataString());
+            fw.flush();
+            fw.close();
 
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(data.getBmiDataString());
-
-            bw.close();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void showBtnClicked() {
-
+    public void showBtnClicked(View v) {
+        Intent i = new Intent(MainActivity.this, BmiDataListActivity.class);
+        startActivity(i);
     }
 
     public boolean isExternalStorageWritable() {

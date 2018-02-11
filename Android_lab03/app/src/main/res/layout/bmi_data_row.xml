@@ -19,10 +19,29 @@
         android:id="@+id/weightLBL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="體重："
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/heightLBL" />
+
+    <TextView
+        android:id="@+id/bmiLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="BMI："
         app:layout_constraintStart_toStartOf="@+id/heightLBL"
         app:layout_constraintTop_toBottomOf="@+id/heightLBL" />
+
+    <TextView
+        android:id="@+id/suggestionLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="建議："
+        app:layout_constraintStart_toStartOf="@+id/heightLBL"
+        app:layout_constraintTop_toBottomOf="@+id/bmiLBL"/>
 
     <TextView
         android:id="@+id/heightTV"
@@ -36,23 +55,23 @@
         android:id="@+id/weightTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/weightLBL"
-        app:layout_constraintStart_toStartOf="@+id/heightTV" />
+        app:layout_constraintStart_toEndOf="@+id/weightLBL" />
 
     <TextView
-        android:id="@+id/suggestionLBL"
+        android:id="@+id/bmiTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="建議："
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/heightLBL"
-        app:layout_constraintTop_toTopOf="@+id/heightLBL" />
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/bmiLBL"
+        app:layout_constraintStart_toStartOf="@id/heightTV" />
 
     <TextView
         android:id="@+id/suggestionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/suggestionLBL"
-        app:layout_constraintStart_toEndOf="@+id/suggestionLBL" />
+        app:layout_constraintStart_toStartOf="@+id/heightTV" />
+
 </android.support.constraint.ConstraintLayout>
